@@ -1,3 +1,5 @@
+<% provide(:title,"ユーザー一覧") %>
+
 <div class="index-container">
   <div class="index-contents">
     <div class="index-side index-line">
@@ -5,158 +7,27 @@
         <h1>ユーザー一覧</h1>
         <h2>索引</h2>
         <ul class="index-search-list">
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
-          <li>
-            <a href="">A</a>
-          </li>
+          <% (("A".."Z").to_a.concat(("0".."9").to_a).append("_")).each do |str| %>
+            <li>
+              <%= link_to(str,"/#{str}") %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
     <div class="index-main index-line">
       <div class="index-main-container">
         <ul class="index-user-list">
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
-          <li>
-            <a href="">
-              <img src="./shou.png">
-            </a>
-            <div class="index-user-name">
-              <a href="">テストですテストですテストです</a>
-            </div>
-          </li>
+          <% for i in 1..10 %>
+            <li>
+              <%= link_to("/") do %>
+                <img src="./shou.png">
+              <% end %>
+              <div class="index-user-name">
+                <%= link_to("テストですテストですテストです#{i}","/") %>
+              </div>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>

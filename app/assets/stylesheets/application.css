@@ -40,3 +40,46 @@ a{
 p{
   margin: 0;
 }
+
+header{
+  background-color: #77f;
+  margin-bottom: 20px;
+}
+
+.header-container{
+  max-width: 1200px;
+  height: 60px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+
+.logo a{
+  display: block;
+  float: left;
+}
+
+.header-container ul{
+  height: 100%;
+  float: right;
+}
+
+.header-container li{
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-container a{
+  color: white;
+  display: block;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.header-container a:hover{
+  background-color: #44f;
+}

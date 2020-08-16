@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Monotuku</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,33 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <%= link_to("/") do %>
+            <img src="/">
+          <% end %>
+        </div>
+        <ul>
+          <li>
+            <%= link_to("ホーム","/") %>
+          </li>
+          <li>
+            <%= link_to("投稿する","/") %>
+          </li>
+          <li>
+            <%= link_to("ログイン","/") %>
+          </li>
+          <li>
+            <%= link_to("ユーザー一覧","/users/index") %>
+          </li>
+          <li>
+            <%= link_to("マイページ","/users/show") %>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
     <%= yield %>
   </body>
 </html>
