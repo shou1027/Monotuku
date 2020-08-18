@@ -11,7 +11,7 @@
   <body>
     <header>
       <div class="header-container">
-        <div class="logo">
+        <div class="header-logo">
           <%= link_to("モノツク","/") %>
         </div>
         <ul class="header-nav">
@@ -32,5 +32,21 @@
     </header>
     
     <%= yield %>
+    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <%= link_to("モノツク","/") %>
+        </div>
+        <ul class="footer-nav">
+          <li>
+            <%= link_to("ABOUT","/about") %>
+          </li>
+          <li>
+            <%= link_to("HELP","/help") %>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .home-contents{
   max-width: 1500px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px;
   overflow: hidden;
 }
@@ -164,6 +164,39 @@
 
 .home-category-ran{
   margin-top: 20px;
+}
+
+/**********about**********/
+
+.about-container{
+  padding: 100px 20px;
+  background-color: #77f;
+}
+
+.about-contents{
+  text-align: center;
+  color: blue;
+}
+
+.about-contents h1,
+.about-contents h2,
+.about-contents p
+{
+  display: block;
+  padding: 15px 0;
+}
+
+.about-contents a{
+  background-color: green;
+  color: white;
+  margin: 50px 0;
+  padding: 15px 50px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.about-contents a:hover{
+  background-color: darkgreen;
 }
 
 @media(max-width: 1200px)
