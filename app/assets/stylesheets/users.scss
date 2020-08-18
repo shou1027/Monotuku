@@ -1,7 +1,8 @@
 .index-contents{
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px;
+  overflow: hidden;
 }
 
 .index-line{
@@ -101,8 +102,9 @@
 
 .user-contents{
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px;
+  overflow: hidden;
 }
 
 .user-line{
@@ -153,11 +155,15 @@
 .user-side-container a{
   width: 100%;
   display: block;
-  background-color: rgb(149, 149, 255);
+  background-color: #77f;
   color: white;
   margin-top: 30px;
   padding: 3px 0;
   text-align: center;
+}
+
+.user-side-container a:hover{
+  background-color: #55f;
 }
 
 .user-main{
@@ -209,6 +215,74 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/**********login**********/
+
+.login-contents{
+  margin: 100px auto;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+}
+
+.login-form{
+  margin-top: 50px;
+}
+
+.login-input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.login-submit{
+  background-color: green;
+  border: none;
+  font-size: 16px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  color: white;
+  display: block;
+}
+
+.login-submit:hover{
+  background-color: darkgreen;
+}
+
+/**********signup**********/
+
+.signup-contents{
+  margin: 100px auto;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+}
+
+.signup-form{
+  margin-top: 50px;
+}
+
+.signup-input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.signup-submit{
+  background-color: green;
+  border: none;
+  font-size: 16px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  color: white;
+  display: block;
+}
+
+.signup-submit:hover{
+  background-color: darkgreen;
 }
 
 @media(max-width: 1100px)

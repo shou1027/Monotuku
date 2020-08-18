@@ -10,14 +10,12 @@ Rails.application.routes.draw do
   get 'users/show'
 
   get 'users/index'
-
-  get 'home/home'
-
-  get 'home/about'
-
-  get 'home/help'
   
   get "signup" => "users#signup"
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+  get "logout" => "users#logout"
+  post "new" => "users#new"
   
   get "/" => "home#home"
   get "timeline" => "home#timeline"

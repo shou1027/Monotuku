@@ -19,14 +19,20 @@
             <%= link_to("投稿する","/") %>
           </li>
           <li>
-            <%= link_to("ログイン","/") %>
-          </li>
-          <li>
             <%= link_to("ユーザー一覧","/users/index") %>
           </li>
-          <li>
-            <%= link_to("マイページ","/users/show") %>
-          </li>
+          <% if session[:user_id] %>
+            <li>
+              <%= link_to(User.find_by(id: session[:user_id]).name,"/users/show") %>
+            </li>
+            <li>
+              <%= link_to("ログアウト","/logout") %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to("ログイン","/login") %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </header>
