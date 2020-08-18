@@ -55,24 +55,34 @@ header{
   padding-left: 20px;
 }
 
+.logo{
+  height: 100%;
+  display: inline-block;
+}
+
 .logo a{
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
   float: left;
 }
 
-.header-container ul{
+.header-nav{
   height: 100%;
   float: right;
 }
 
-.header-container li{
+.header-nav li{
   float: left;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.header-container a{
+.header-nav a{
   color: white;
   display: block;
   margin-left: 10px;
@@ -80,6 +90,6 @@ header{
   border-radius: 5px;
 }
 
-.header-container a:hover{
+.header-nav a:hover{
   background-color: #44f;
 }

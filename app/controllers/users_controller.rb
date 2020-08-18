@@ -3,5 +3,6 @@ class UsersController < ApplicationController
   end
 
   def index
+    @user = User.page(params[:page]).per(10)
   end
 end

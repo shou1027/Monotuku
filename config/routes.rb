@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   get 'home/help'
   
   get "/" => "home#home"
+  get "timeline" => "home#timeline"
+  get "tag" => "home#tag"
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
