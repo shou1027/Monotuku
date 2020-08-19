@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :allow_logged_out, {only: [:signup]}
+  
   def show
   end
 
@@ -15,7 +17,7 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(name: params[:name],password: params[:password])
     if @user
-      session[:user_id] = @user.id
+      session[:user_name] = @user.name
       redirect_to("/")
     else
       render("users/login_form")
@@ -23,7 +25,7 @@ class UsersController < ApplicationController
   end
   
   def logout
-    session[:user_id] = nil
+    session[:user_name] = nil
     redirect_to("/about")
   end
   
@@ -31,7 +33,7 @@ class UsersController < ApplicationController
     @user = User.new(name: params[:name],password: params[:password])
     
     if @user.save
-      session[:user_id] = @user.id
+      session[:user_name] = @user.name
       redirect_to("/")
     else
       render("users/signup")
